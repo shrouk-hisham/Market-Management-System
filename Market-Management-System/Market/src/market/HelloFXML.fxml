@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.Icon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.HelloFXMLController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="555.0" prefWidth="828.0">
+         <children>
+            <AnchorPane prefHeight="555.0" prefWidth="412.0" styleClass="left-form" stylesheets="@HwlloFXMLCascadeStyleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="414.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="mylabel" layoutX="47.0" layoutY="409.0" styleClass="mylabel" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Super Market Management" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="103.0" layoutY="78.0" prefHeight="62.0" prefWidth="60.0" textFill="#efdfdf">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="231.0" fitWidth="206.0" layoutX="83.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="83.0">
+                     <image>
+                        <Image url="@Image/shopping-bag%20(4).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="mylabel1" layoutX="47.0" layoutY="382.0" prefHeight="26.0" prefWidth="99.0" styleClass="mylabel" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Welcome to " textFill="#ec1e1e">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="admin_form" layoutX="422.4" layoutY="11.0" prefHeight="600.0" prefWidth="415.0" styleClass="right-form" stylesheets="@HwlloFXMLCascadeStyleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="416.8" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="105.0" layoutY="226.0" prefHeight="30.0" prefWidth="206.0" styleClass="mylabel2" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Admin Singn In  " textFill="#329c8f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="admin_username" layoutX="84.0" layoutY="273.0" onAction="#adminLogin" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfield" stylesheets="@HwlloFXMLCascadeStyleSheet.css" />
+                  <Button fx:id="admin_loginbtn" layoutX="148.0" layoutY="400.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="46.0" prefWidth="90.0" styleClass="login-btn" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Login" textFill="WHITE" AnchorPane.bottomAnchor="231.99999999999997" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="175.79999999999998" AnchorPane.topAnchor="400.8" />
+                  <Hyperlink fx:id="admin_hyperlink" layoutX="114.0" layoutY="485.0" onAction="#switchForm" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Login Employee Account " AnchorPane.topAnchor="480.0" />
+                  <Button layoutX="341.0" layoutY="4.8" minWidth="51.0" mnemonicParsing="false" onAction="#close" prefHeight="44.0" prefWidth="60.0" AnchorPane.bottomAnchor="630.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="4.0">
+                     <graphic>
+                        <Icon content="CLOSE" minWidth="-Infinity" onDragDetected="#close" prefHeight="30.0" prefWidth="60.0" styleClass="close" stylesheets="@HwlloFXMLCascadeStyleSheet.css" />
+                     </graphic></Button>
+                  <PasswordField fx:id="admin_password" layoutX="84.0" layoutY="324.0" onAction="#adminLogin" prefHeight="26.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@HwlloFXMLCascadeStyleSheet.css" />
+                  <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="108.0" layoutY="76.0" AnchorPane.bottomAnchor="436.0" AnchorPane.rightAnchor="162.2" AnchorPane.topAnchor="74.0">
+                     <image>
+                        <Image url="@Image/user-3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="employee_form" layoutX="425.0" layoutY="4.0" onDragDetected="#switchForm" prefHeight="562.0" prefWidth="415.0" styleClass="right-form" stylesheets="@HwlloFXMLCascadeStyleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="416.8" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="97.0" layoutY="224.0" prefHeight="30.0" prefWidth="206.0" styleClass="mylabel2" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Employee Sign In" textFill="#329c8f">
+                     <font>
+                        <Font name="Berlin Sans FB" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="employee_id" layoutX="84.0" layoutY="273.0" onAction="#employeeLogin" prefHeight="30.0" prefWidth="220.0" promptText="Employee ID" styleClass="textfield" stylesheets="@HwlloFXMLCascadeStyleSheet.css" />
+                  <Button fx:id="employee_loginbtn" layoutX="149.0" layoutY="400.0" mnemonicParsing="false" onAction="#employeeLogin" prefHeight="46.0" prefWidth="90.0" styleClass="login-btn" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Login" textFill="WHITE" AnchorPane.bottomAnchor="231.99999999999997" AnchorPane.leftAnchor="148.0" AnchorPane.rightAnchor="175.79999999999998" AnchorPane.topAnchor="400.0" />
+                  <Hyperlink fx:id="employee_hyperlink" layoutX="120.0" layoutY="480.0" onAction="#switchForm" stylesheets="@HwlloFXMLCascadeStyleSheet.css" text="Login Admin Account " textFill="#7c817f" />
+                  <Button layoutY="4.8" minWidth="51.0" mnemonicParsing="false" onAction="#close" prefHeight="44.0" prefWidth="60.0" styleClass="close" stylesheets="@HwlloFXMLCascadeStyleSheet.css" AnchorPane.bottomAnchor="630.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="4.0">
+                     <graphic>
+                        <Icon fx:id="CLOS" content="CLOSE" onDragDetected="#close" prefHeight="14.0" prefWidth="68.0" styleClass="close" stylesheets="@HwlloFXMLCascadeStyleSheet.css" />
+                     </graphic>
+                  </Button>
+                  <PasswordField fx:id="employee_password" layoutX="84.0" layoutY="324.0" onAction="#employeeLogin" prefHeight="26.0" prefWidth="220.0" promptText="Password" styleClass="textfield" stylesheets="@HwlloFXMLCascadeStyleSheet.css" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="103.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="436.0" AnchorPane.rightAnchor="162.2" AnchorPane.topAnchor="74.0">
+                     <image>
+                        <Image url="@Image/user-3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
